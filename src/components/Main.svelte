@@ -13,12 +13,17 @@
                 I'm a fledgling full stack developer, learning svelte with experience in a wide variety of languages.
                 I'm currently a student at the University of Southern Maine studying Computer Science, slated to graduate in the spring 2024.
             </p>
+            <p>
+                Some of my favorite langauges/frameworks include:
+                JavaScript, Svelte, React, Python, Elixir, 
+            </p>
 
         </div>
 
         <div>
 
         </div>
+
         <p>
 
         </p>

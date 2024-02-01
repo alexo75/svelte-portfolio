@@ -15,10 +15,19 @@
     </h1>
     <div class="sm:flex items-center gap-4 hidden">
         {#each tabs as tab, index}
-        <a href="">
+        <a href={tab.link} class="duration-300 hover:text-green-600">
             <p>{tab.name}</p>
         </a>
             
         {/each}
     </div>
+    <a href ="https://www.linkedin.com/in/alexandermoneill/"
+    class="colorShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-500">
+        <div class="absolute top-0 right-full w-full h-full bg-violet-400
+         opacity-20 group-hover:translate-x-full z-0 duration-200">
+        
+        
+        </div>
+    <h4 class="relative z-9">Reach out</h4>
+    </a>
 </header>

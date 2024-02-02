@@ -1,4 +1,11 @@
 <script>
+  import Step from "./Step.svelte";
+
+    let steps=[
+        {name:'WeScale', icon:'fa-solid fa-shield'},
+        {name:'ArcadeVault', icon:'fa-solid fa-gamepad'},
+        {name:'Elixir/Phoenix', icon:'fa-solid fa-flask'}
+    ]
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -66,6 +73,22 @@
     items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-blue-800 duration-200"
     >
       <i class="fa-brands fa-github fa-3x" />
+      <p> Go to my Github</p>
     </a>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+        <Step step={steps[0]}>
+            <p> WeScale is a simple React Native application that uses Riot Games API
+                to displays details about a searched user's previous game in League of Legends.
+                In additition it displays information about the items and champions within the game.
+            </p>
+        </Step>
+        <Step step={steps[1]}>
+
+        </Step>
+        <Step step={steps[2]}>
+
+        </Step>
+
+    </div>
   </section>
 </main>

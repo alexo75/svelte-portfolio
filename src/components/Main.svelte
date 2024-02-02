@@ -83,10 +83,17 @@
             </p>
         </Step>
         <Step step={steps[1]}>
-
+            <p> ArcadeVault is a web application and my first time using React on a real project.
+                I worked on this project for a Database Management course at USM, alongside my classmate Deiby Wu Lee.
+                The project generated fake data using Faker and displayed it within a SQL database, using React for the frontend.
+            </p>
         </Step>
         <Step step={steps[2]}>
+            <p> Elixir/Phoenix is more of a learning project than anything else. I worked on a website at an internship
+                that used Elixir/Phoenix LiveView and devloped a site for a local non-profit organization. I learned a lot about
+                task management and designed the frontend for a site that was easy to manage. 
 
+            </p>
         </Step>
 
     </div>

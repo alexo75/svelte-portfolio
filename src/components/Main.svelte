@@ -56,27 +56,31 @@
         <h4 class="relative z-9">Reach out</h4>
       </a>
     </div>
-    <div class="relative shadow-2xl grid place-items-center">
-      <img
-        src={"images/nobggoober.png"}
-        alt="profile picture"
-        class="object-cover z-[2] max-b[70vh] rounded-md"
-      />
-    </div>
+    <Scroll>
+      <div class="relative shadow-2xl grid place-items-center">
+        <img
+          src={"images/nobggoober.png"}
+          alt="profile picture"
+          class="object-cover z-[2] max-b[70vh] rounded-md"
+        />
+      </div>
+    </Scroll>
 
     <style>
     </style>
   </section>
 
   <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
-    <div class="flex flex-col gap-4 text-center">
-      <h6 class="text-xl underline sm:text-3xl md:text-4xl">Projects</h6>
-      <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-        Check out some of my favorite <span class="poppins text-blue-500"
-          >projects</span
-        >.
-      </h3>
-    </div>
+    <Scroll>
+      <div class="flex flex-col gap-4 text-center">
+        <h6 class="text-xl underline sm:text-3xl md:text-4xl">Projects</h6>
+        <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+          Check out some of my favorite <span class="poppins text-blue-500"
+            >projects</span
+          >
+        </h3>
+      </div>
+    </Scroll>
     <a
       href="https://github.com/alexo75"
       target="_blank"

@@ -16,7 +16,7 @@
                 },
                 {
                     rootMargin: '0px',
-                    threshold: 0.5
+                    threshold: .75
                 }
             );
     
@@ -43,11 +43,11 @@
 <style>
     div { 
         opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transform: translateX(30px);
+        transition: opacity 3s ease, transform 3s ease;
     }
     .visible {
         opacity: 1;
-        transform: none;
+        transform: translateX(0);
     }
 </style>

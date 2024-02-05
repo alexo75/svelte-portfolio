@@ -11,6 +11,17 @@ html {
 
 }
 
+.main-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.scroll-section{
+    scroll-snap-align: start;
+    height:100vh;
+}   
+
 h1, h2, h3,
 .poppins{
     font-family: 'Poppins', sans-serif;

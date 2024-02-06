@@ -1,6 +1,7 @@
 <script>
   import Step from "./Step.svelte";
   import Scroll from "./Scroll.svelte";
+  import MouseTrailer from "./MouseTrailer.svelte";
 
   let steps = [
     { name: "WeScale", icon: "fa-solid fa-shield" },
@@ -10,6 +11,7 @@
 </script>
 
 <div class="main-container">
+  <MouseTrailer />
   <main class="flex flex-col flex-1 p-4">
     <section
       id="introPage"
@@ -44,29 +46,31 @@
             </p>
           </Scroll>
 
-          <a
-            class="blueShadow ,x-autp lg:mr-auto text-base sm:text-lg md:text-xl
+          <Scroll>
+            <a
+              class="blueShadow ,x-autp lg:mr-auto text-base sm:text-lg md:text-xl
          px-5 py-2 group rounded-full bg-white text-slate-500 cursor-pointer"
-            href="https://www.linkedin.com/in/alexandermoneill/"
-            target="_blank"
-          >
-            <div
-              class="absolute top-0 right-full w-full h-full bg-blue-500
+              href="https://www.linkedin.com/in/alexandermoneill/"
+              target="_blank"
+            >
+              <div
+                class="absolute top-0 right-full w-full h-full bg-blue-500
           opacity-20 group-hover:translate-x-full z-0 duration-200"
-            ></div>
-            <h4 class="relative z-9">Reach out</h4>
-          </a>
-        </div>
+              ></div>
+              <h4 class="relative z-9">Reach out</h4>
+            </a>
+          </Scroll>
 
-        <Scroll>
-          <div class="relative shadow-2xl grid place-items-center">
-            <img
-              src={"images/nobggoober.png"}
-              alt="profile picture"
-              class="object-cover z-[2] max-b[70vh] rounded-md"
-            />
-          </div>
-        </Scroll>
+          <Scroll>
+            <div class="relative shadow-2xl grid place-items-center">
+              <img
+                src={"images/nobggoober.png"}
+                alt="profile picture"
+                class="object-cover z-[2] max-b[70vh] rounded-md"
+              />
+            </div>
+          </Scroll>
+        </div>
       </div>
       <style>
       </style>

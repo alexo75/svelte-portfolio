@@ -31,7 +31,7 @@
       <i class="fa-solid fa-arrow-up grid place-items-center aspect-square" />
     </button>
   </div>
-  <Header {y} />
+  <Header {y}/>
   <slot />
   <Footer />
 </div>

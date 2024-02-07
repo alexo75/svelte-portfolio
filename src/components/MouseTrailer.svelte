@@ -3,7 +3,7 @@
   
     let x = 0;
     let y = 0;
-    let interacting = false; 
+    let interacting = false;
   
     onMount(() => {
       const updatePosition = (event) => {

@@ -48,7 +48,7 @@
 
           <Scroll>
             <a
-              class="blueShadow ,x-autp lg:mr-auto text-base sm:text-lg md:text-xl
+              class="blueShadow x-auto lg:mr-auto text-base sm:text-lg md:text-xl
          px-5 py-2 group rounded-full bg-white text-slate-500 cursor-pointer"
               href="https://www.linkedin.com/in/alexandermoneill/"
               target="_blank"
@@ -59,9 +59,7 @@
               ></div>
               <h4 class="relative z-9">Reach out</h4>
             </a>
-          </Scroll>
 
-          <Scroll>
             <div class="relative shadow-2xl grid place-items-center">
               <img
                 src={"images/nobggoober.png"}
@@ -72,8 +70,6 @@
           </Scroll>
         </div>
       </div>
-      <style>
-      </style>
     </section>
 
     <div class="scroll-section">
@@ -124,6 +120,18 @@
               for a site that was easy to manage.
             </p>
           </Step>
+        </div>
+      </section>
+      <section id="imageshowcase">
+        <div class="scroll-section">
+
+        <Scroll>
+        <div class="flex justify-between items-center gap-4">
+            <img src={"images/cherryblossom.jpg"} alt="Cherry Blossom" class="w-1/3 object-cover h-auto">
+            <img src={"images/romebuilding.jpg"} alt="Landscape 1" class="w-1/3 object-cover h-auto">
+            <img src={"images/scenery.jpg"} alt="Landscape 2" class="w-1/3 object-cover h-auto">
+          </div>
+        </Scroll>
         </div>
       </section>
     </div>

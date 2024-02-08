@@ -2,6 +2,7 @@
   import Step from "./Step.svelte";
   import Scroll from "./Scroll.svelte";
   import MouseTrailer from "./MouseTrailer.svelte";
+  import { hasContext } from "svelte";
 
   let steps = [
     { name: "WeScale", icon: "fa-solid fa-shield" },
@@ -126,12 +127,23 @@
         <div class="scroll-section">
 
         <Scroll>
-        <div class="flex justify-between items-center gap-4">
-            <img src={"images/cherryblossom.jpg"} alt="Cherry Blossom" class="w-1/3 object-cover h-auto">
-            <img src={"images/romebuilding.jpg"} alt="Landscape 1" class="w-1/3 object-cover h-auto">
-            <img src={"images/scenery.jpg"} alt="Landscape 2" class="w-1/3 object-cover h-auto">
-          </div>
+            <div class="flex justify-between items-center gap-4">
+                <img src={"images/cherryblossom.jpg"} alt="Cherry Blossom" class="image-height">
+                <img src={"images/romebuilding.jpg"} alt="Landscape 1" class="image-height">
+                <img src={"images/scenery.jpg"} alt="Landscape 2" class="image-height">
+            </div>
         </Scroll>
+
+        <style>
+            .image-height {
+                height: calc(100vh / 2); 
+                width: calc(100% / 3);
+            }
+            .image: has(.){
+
+            }
+        </style>
+
         </div>
       </section>
     </div>

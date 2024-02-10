@@ -1,26 +1,33 @@
 <script>
   import { onMount } from 'svelte';
+  import { trailerCount } from './store.js';
 
-  let x = 0;
-  let y = 0;
-  let numTrailers = 5;
-  let trailers = Array(numTrailers).fill({ x: 0, y: 0, scale: 1 });
+  let trailers = [{ x: 0, y: 0, size: 20 }];
+  
+  // Subscribe to the store and reactively update the trailers array
+  $: $trailerCount, trailers = Array.from({ length: $trailerCount }, (_, i) => ({
+    x: trailers[i]?.x || 0,
+    y: trailers[i]?.y || 0,
+    size: 20 - i * 2 // Decrease size for each subsequent trailer
+  }));
 
   onMount(() => {
-    const updatePosition = (event) => {
-      for (let i = trailers.length - 1; i > 0; i--) {
-        trailers[i] = {...trailers[i - 1]};
+    window.addEventListener('mousemove', (event) => {
+      // Update the position of the first trailer to follow the mouse
+      // Subsequent trailers follow the one in front of them
+      for (let i = trailers.length - 1; i >= 0; i--) {
+        trailers[i] = i === 0 ? 
+          { ...trailers[i], x: event.clientX - 10, y: event.clientY - 10 } : 
+          { ...trailers[i], x: trailers[i-1].x, y: trailers[i-1].y };
       }
-      trailers[0] = { x: event.clientX - 10, y: event.clientY - 10, scale: 1 };
-    };
+    });
 
-    window.addEventListener('mousemove', updatePosition);
-
-    return () => {
-      window.removeEventListener('mousemove', updatePosition);
-    };
+    window.addEventListener('click', () => {
+      trailerCount.update(n => n + 1); // Increase count on click
+    });
   });
 </script>
+
 
 <style>
   .trailer {

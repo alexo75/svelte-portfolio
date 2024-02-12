@@ -2,13 +2,10 @@
   import { onMount } from 'svelte';
   import { writable } from 'svelte/store';
 
-  // A store to keep track of the number of trailers
   const trailerCount = writable(1);
 
-  // The initial trailers array
   let trailers = [{ x: 0, y: 0 }];
 
-  // Reactively update the trailers array based on trailerCount
   $: $trailerCount, trailers = Array.from({ length: $trailerCount }, (_, i) => ({
     ...trailers[i] ?? { x: 0, y: 0 }
   }));

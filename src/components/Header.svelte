@@ -1,5 +1,5 @@
 <script>
-    import { trailerCount } from './store.js';
+    import { countStore } from './store.js';
   
     export let y;
     let tabs = [
@@ -7,9 +7,8 @@
       { name: 'About Me', link: '#about' }
     ];
   
-    // Function to reset trailer count
     function resetTrailerCount() {
-      trailerCount.set(1);
+        countStore.set(1);
     }
   </script>
   
@@ -26,7 +25,7 @@
           </a>
           {/each}
           <!-- show trailer count -->
-          <p>{$trailerCount}</p>
+          <p>{$countStore}</p>
           <!-- reset trailers -->
           <button onclick={resetTrailerCount} class="px-4 py-2 bg-red-500 text-white rounded">Reset Trailers</button>
       </div>

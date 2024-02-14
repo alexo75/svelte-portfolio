@@ -93,7 +93,7 @@
             var elOffsetWidth = el.offsetWidth - pad;
             var parentOffsetWidth = parentEl.offsetWidth;
             var ratio = parentOffsetWidth / elOffsetWidth;
-            timeout = setTimeout(anime.set(el, {scale: ratio}), 10);
+            timeout = setTimeout(anime.set(el, {scale: ratio}), 10);    
         }
         resize();
         window.addEventListener('resize', resize);
@@ -152,8 +152,7 @@
                 </linearGradient>
             </defs>
             <!-- TODO: pathstuff -->
-            <path d="M361.604 361.238c-24.407 24.408-51.119 37.27-59.662 28.727-8.542-8.543 4.319-35.255 28.726-59.663 24.408-24.407 51.12-37.269 59.663-28.726 8.542 8.543-4.319 35.255-28.727 59.662z"/>
-            <!-- TODO: Adde paths for the d20 shape -->
+            <path d="M220 110 L330 330 L110 330 Z" fill="none" stroke="rgba(80,80,80,.35)" />            <!-- TODO: Adde paths for the d20 shape -->
         </svg>
     </div>
 </div>

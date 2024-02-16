@@ -152,7 +152,12 @@
                 </linearGradient>
             </defs>
             <!-- TODO: pathstuff -->
-            <path d="M220 110 L330 330 L110 330 Z" fill="none" stroke="rgba(80,80,80,.35)" />            <!-- TODO: Adde paths for the d20 shape -->
+            <path d="M220 110 L330 330 L110 330 Z" fill="none" stroke="rgba(80,80,80,.35)" />
+            
+            <!-- TODO: Adde paths for the d20 shape -->
+
+
+            <!-- I've done work on developing a blender svg for this project just commenting for push :) -->
         </svg>
     </div>
 </div>

@@ -2,6 +2,7 @@
   import Step from "./Step.svelte";
   import Scroll from "./Scroll.svelte";
   import MouseTrailer from "./MouseTrailer.svelte";
+  import FlipAnimation from "../components/FlipAnimation.svelte";
   import { hasContext } from "svelte";
 
   let steps = [
@@ -36,6 +37,7 @@
               at the University of Southern Maine studying Computer Science,
               slated to graduate in the spring 2024.
             </p>
+            <FlipAnimation />
           </Scroll>
           <Scroll>
             <p>

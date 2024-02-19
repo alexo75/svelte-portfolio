@@ -3,6 +3,7 @@
   import anime from "animejs";
 
   let isFlipped = false;
+  let currentCard = "front";
 
   onMount(() => {
     const container = document.querySelector(".flip-container");
@@ -15,6 +16,9 @@
         rotateY: isFlipped ? "0deg" : "180deg",
         easing: "easeInOutSine",
         duration: 500,
+        complete: () => {
+          currentCard = isFlipped ? "front" : "back";
+        },
       });
 
       isFlipped = !isFlipped;
@@ -24,8 +28,11 @@
 
 <div class="flip-container">
   <div class="flip-card">
-    <div class="flip-front">front</div>
-    <div class="flip-back">back</div>
+    {#if currentCard === "front"}
+      <div class="flip-front">front</div>
+    {:else}
+      <div class="flip-back">back</div>
+    {/if}
   </div>
 </div>
 
@@ -54,6 +61,7 @@
 
   .flip-front {
     background-color: #d22;
+    transform: rotateY(0deg);
   }
 
   .flip-back {

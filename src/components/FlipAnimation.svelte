@@ -3,12 +3,9 @@
   import anime from "animejs";
 
   let isFlipped = false;
-  let currentCard = "front";
 
   onMount(() => {
     const container = document.querySelector(".flip-container");
-    const front = document.querySelector(".flip-front");
-    const back = document.querySelector(".flip-back");
 
     container.addEventListener("click", () => {
       anime({
@@ -16,9 +13,6 @@
         rotateY: isFlipped ? "0deg" : "180deg",
         easing: "easeInOutSine",
         duration: 500,
-        complete: () => {
-          currentCard = isFlipped ? "front" : "back";
-        },
       });
 
       isFlipped = !isFlipped;
@@ -26,14 +20,11 @@
   });
 </script>
 
+
 <div class="flip-container">
   <div class="flip-card">
-    {#if currentCard === "front"}
-      <div class="flip-front">this is the front</div>
-    {:else}
-    <!-- why isnt the back showing.. -->
-      <div class="flip-back">back</div>
-    {/if}
+    <div class="flip-front">this is the front</div>
+    <div class="flip-back">this is the back</div>
   </div>
 </div>
 
@@ -62,7 +53,6 @@
 
   .flip-front {
     background-color: #d22;
-    transform: rotateY(0deg);
   }
 
   .flip-back {

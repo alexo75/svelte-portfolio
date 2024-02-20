@@ -128,13 +128,26 @@
       <section id="imageshowcase">
         <div class="scroll-section">
 
-        <Scroll>
+          <Scroll>
             <div class="flex justify-between items-center gap-4">
-                <img src={"images/cherryblossom.jpg"} alt="Cherry Blossom" class="image-height">
-                <img src={"images/romebuilding.jpg"} alt="Landscape 1" class="image-height">
-                <img src={"images/scenery.jpg"} alt="Landscape 2" class="image-height">
+              <div class="image-container">
+                <img src="images/cherryblossom.jpg" alt="Cherry Blossom" class="image-height">
+                <div class="image-overlay">Cherry Blossoms</div>
+                <div class="caption">A beautiful view of cherry blossoms.</div>
+              </div>
+              <div class="image-container">
+                <img src="images/romebuilding.jpg" alt="Landscape 1" class="image-height">
+                <div class="image-overlay">Roman Architecture</div>
+                <div class="caption">Historic buildings in Rome.</div>
+              </div>
+              <div class="image-container">
+                <img src="images/scenery.jpg" alt="Landscape 2" class="image-height">
+                <div class="image-overlay">Serene Scenery</div>
+                <div class="caption">Peaceful landscape view.</div>
+              </div>
             </div>
-        </Scroll>
+          </Scroll>
+          
 
         <style>
             .image-height {

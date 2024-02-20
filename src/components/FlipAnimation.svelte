@@ -29,8 +29,9 @@
 <div class="flip-container">
   <div class="flip-card">
     {#if currentCard === "front"}
-      <div class="flip-front">front</div>
+      <div class="flip-front">this is the front</div>
     {:else}
+    <!-- why isnt the back showing.. -->
       <div class="flip-back">back</div>
     {/if}
   </div>

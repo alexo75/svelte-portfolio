@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import anime from "animejs";
 
   let isFlipped = false;
 
@@ -8,27 +7,24 @@
     const container = document.querySelector(".flip-container");
 
     container.addEventListener("click", () => {
-      anime({
-        targets: container,
-        rotateY: isFlipped ? "0deg" : "180deg",
-        easing: "easeInOutSine",
-        duration: 500,
-      });
-
       isFlipped = !isFlipped;
     });
   });
 </script>
 
-
 <div class="flip-container">
-  <div class="flip-card">
+  <div class="flip-card" class:flipped>
     <div class="flip-front">this is the front</div>
     <div class="flip-back">this is the back</div>
   </div>
 </div>
 
 <style>
+  :root {
+    --front-color: #d22;
+    --back-color: #2d2;
+  }
+
   .flip-container {
     perspective: 1000px;
     width: 200px;
@@ -43,6 +39,10 @@
     transition: transform 0.5s;
   }
 
+  .flip-card.flipped {
+    transform: rotateY(180deg);
+  }
+
   .flip-front,
   .flip-back {
     position: absolute;
@@ -52,11 +52,10 @@
   }
 
   .flip-front {
-    background-color: #d22;
+    background-color: var(--front-color);
   }
 
   .flip-back {
-    background-color: #2d2;
-    transform: rotateY(180deg);
+    background-color: var(--back-color);
   }
 </style>

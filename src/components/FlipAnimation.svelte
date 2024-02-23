@@ -58,4 +58,8 @@
   .flip-back {
     background-color: var(--back-color);
   }
+
+  .flip-back {
+    transform: rotateY(180deg);
+  }
 </style>

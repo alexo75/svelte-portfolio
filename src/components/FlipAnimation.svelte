@@ -21,7 +21,7 @@
 
 <style>
   :root {
-    --front-color: #d22;
+    --front-color: rgb(34, 50, 221);
     --back-color: #2d2;
   }
 

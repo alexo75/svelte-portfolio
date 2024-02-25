@@ -1,12 +1,13 @@
 <script>
-    import { countStore } from './store.js'; // Ensure this is imported
-  
+    import { countStore } from './store.js';
+
     function handleClick() {
-      countStore.update(count => count < 10 ? count + 1 : 1);
+        countStore.update(currentCount => {
+            return currentCount < 10 ? currentCount + 1 : 1;
+        });
     }
-  </script>
-  
-  <div on:click={handleClick}>
-    <p>Click to increase trailers: {$countStore}</p>
-  </div>
-  
+</script>
+
+<div on:click={handleClick}>
+    <p>{$countStore}</p>
+</div>

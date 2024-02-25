@@ -19,6 +19,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"animejs": "^3.2.2"
+		"animejs": "^3.2.2",
+		"clsx": "^2.1.0",
+		"framer-motion": "^11.0.6",
+		"tailwind-merge": "^2.2.1"
 	}
 }

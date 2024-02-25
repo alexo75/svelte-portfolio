@@ -98,7 +98,6 @@ h1, h2, h3,
     opacity: 1;
 }
 
-/* Gentle Sway Animation */
 @keyframes gentleSway {
     0%, 100% {
         transform: rotate(-1deg);

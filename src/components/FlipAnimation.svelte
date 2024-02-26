@@ -1,8 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  let isFlipped = false;
-
+  let flipped = false;
   onMount(() => {
     const container = document.querySelector(".flip-container");
 
